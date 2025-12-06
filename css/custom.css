@@ -1,0 +1,130 @@
+/*
+|--------------------------------------------------------------------------
+| GAMERGEAR Custom Stylesheet
+|--------------------------------------------------------------------------
+| This file is used for professional styles that complement Tailwind CSS, 
+| such as custom fonts, keyframes, and specific global element overrides.
+*/
+
+/* 1. Font Import (Professional, modern sans-serif) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+
+/* Apply font globally */
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+/* 2. Global Accessibility and Focus Styles */
+/* Improve focus visibility for keyboard users */
+:focus-visible {
+    outline: 3px solid #E4002B; /* gg-primary */
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* Remove default link focus outline when clicking with a mouse */
+a:focus:not(:focus-visible), button:focus:not(:focus-visible), input:focus:not(:focus-visible) {
+    outline: none;
+}
+
+
+/* 3. Star Rating Styling */
+/* Ensures the star icons have a consistent, premium gold color */
+.product-rating .star {
+    color: #FFC107; /* Gold */
+    font-size: 1.1rem;
+    margin-right: 2px;
+    display: inline-block;
+}
+
+/* 4. Custom Keyframes and Animations */
+
+/* A simple fade-in effect for elements loaded by JavaScript (e.g., product cards) */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.js-loaded-item {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Custom button pulse for featured items or important calls-to-action */
+@keyframes buttonPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(228, 0, 43, 0.4); /* gg-primary with transparency */
+    }
+    70% {
+        box-shadow: 0 0 0 8px rgba(228, 0, 43, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(228, 0, 43, 0);
+    }
+}
+
+.pulsing-hero-btn {
+    animation: buttonPulse 2.5s infinite;
+}
+
+/* 5. Scrollbar Styling (Optional, for a darker gaming aesthetic) */
+/* This is optional and may not work in all browsers (e.g., Firefox) */
+body::-webkit-scrollbar {
+    width: 8px;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: #333333; /* Dark scrollbar thumb */
+    border-radius: 10px;
+}
+body::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Light track */
+}
+
+
+/* 6. Product Card Specific Overrides */
+
+/* Ensure the product card title space is fixed for alignment in the grid */
+.product-card h3 {
+    min-height: 3rem; /* Enough for two lines of text */
+}
+
+/* Style for the price range input track/thumb (often inconsistent across browsers) */
+/* This ensures the price slider looks consistent and matches the theme color */
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+    width: 100%;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 16px;
+    width: 16px;
+    background-color: #E4002B; /* gg-primary */
+    border-radius: 50%;
+    margin-top: -6px; /* Center the thumb vertically */
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.8);
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    height: 4px;
+    background: #cccccc;
+    border-radius: 2px;
+}
+
+/* Simple transition for image hovers */
+.product-card img {
+    transition: transform 0.4s ease-in-out;
+}
+.product-card:hover img {
+    transform: scale(1.02);
+}
