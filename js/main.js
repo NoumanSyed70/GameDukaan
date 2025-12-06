@@ -6,7 +6,7 @@ const faqsData = [
     { q: "What is your warranty policy for GPUs?", a: "All graphics cards come with a minimum 1-year manufacturer warranty, handled through our local service center partners. Physical damage voids the warranty." },
     { q: "How long does shipping take?", a: "Standard delivery time is 3-5 business days across major cities. Custom-built PCs may require an additional 5-7 days for assembly and testing." },
     { q: "Can I cancel my order?", a: "Orders can only be canceled within 12 hours of placement. If the item has already been shipped, cancellation is not possible." },
-    { q: "Do you sell used/refurbished items?", a: "No, GAMERGEAR strictly sells brand new, sealed, and imported gaming products." },
+    { q: "Do you sell used/refurbished items?", a: "No, GamerDukaan strictly sells brand new, sealed, and imported gaming products." },
     { q: "What payment methods do you accept?", a: "We accept bank transfers (IBFT), credit/debit cards, and payment via SadaPay/NayaPay." },
     { q: "What are the hidden charges?", a: "The price listed includes all taxes (GST). The only added charge is the flat-rate delivery fee shown at checkout." },
     { q: "Do you have a physical store?", a: "Currently, we operate purely as an online e-commerce storefront to keep our prices competitive." },
